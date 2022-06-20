@@ -1,0 +1,11 @@
+management:
+  metrics:
+    export:
+      datadog:
+        enabled: false
+      prometheus:
+        enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health, info, loggers, metrics
