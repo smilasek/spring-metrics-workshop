@@ -1,3 +1,10 @@
+spring:
+  application:
+    name: spring-metrics-workshop
+
+server:
+  port: 8080
+
 management:
   metrics:
     export:
