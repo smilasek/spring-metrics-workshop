@@ -1,8 +1,10 @@
 package pl.smilasek.workshop.spring.metrics.lesson_2
 
 import io.micrometer.core.annotation.Timed
+import io.micrometer.core.aop.TimedAspect
 import io.micrometer.core.instrument.MeterRegistry
 import io.micrometer.core.instrument.Metrics
+import org.springframework.context.annotation.Import
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
@@ -10,6 +12,7 @@ import java.util.concurrent.TimeUnit.SECONDS
 import kotlin.random.Random
 
 @RestController
+@Import(TimedAspect::class)
 class TimerMetricsController(
         private val meterRegistry: MeterRegistry,
         private val someComponent: SomeComponent
