@@ -1,12 +1,15 @@
 package pl.smilasek.workshop.spring.metrics.lesson_2
 
 import io.micrometer.core.annotation.Counted
+import io.micrometer.core.aop.CountedAspect
 import io.micrometer.core.instrument.Counter
 import io.micrometer.core.instrument.MeterRegistry
 import io.micrometer.core.instrument.Metrics
+import org.springframework.context.annotation.Import
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
+@Import(CountedAspect::class)
 @RestController
 class CounterMetricsController(
         private val meterRegistry: MeterRegistry
