@@ -13,6 +13,8 @@
 
 ## Exercises
 
-1. `counter.aspect` and `timer.aspect` does not work. Investigate why and fix it.
+1. `counter.aspect` does not work. Investigate why and fix it.
 2. Write your own gauge metric, which should monitor cache size. Cache should be list/set of some objects.
-3. Why `timer.aspect.some-method` does not produce any metric?
+3. Why `timer.aspect.some-component-method` does not work, but `timer.aspect` works? How to solve that? Hint:
+   see `@Timed` javadoc
+3. Why `timer.aspect.some-internal-method` does not produce any metric?
