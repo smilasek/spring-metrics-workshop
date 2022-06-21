@@ -8,10 +8,14 @@ server:
 management:
   metrics:
     export:
+      # only for presentation reason
       datadog:
         enabled: false
+        application-key: some-app
+        api-key: some-api-key
       prometheus:
-        enabled: false
+        enabled: true
+
   endpoints:
     web:
       exposure:
