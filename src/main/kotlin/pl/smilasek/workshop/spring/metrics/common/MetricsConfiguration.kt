@@ -14,6 +14,8 @@ class MetricsConfiguration {
     private lateinit var applicationName: String
 
     @Bean
-    fun metricsCommonTags() =
-            MeterRegistryCustomizer { it: MeterRegistry -> it.config().commonTags("application", applicationName) }
+    fun metricsCommonTags() = MeterRegistryCustomizer { it: MeterRegistry ->
+        it.config()
+                .commonTags("application", applicationName)
+    }
 }

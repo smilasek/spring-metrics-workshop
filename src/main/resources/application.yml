@@ -15,7 +15,8 @@ management:
         api-key: some-api-key
       prometheus:
         enabled: true
-
+    enable:
+      jvm: false
   endpoints:
     web:
       exposure:
