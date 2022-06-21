@@ -18,7 +18,7 @@ repositories {
 dependencies {
     // needed for observability
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-aop")
+//    implementation("org.springframework.boot:spring-boot-starter-aop")
 
     // in order to show metrics for reactive streams
     implementation("org.springframework.boot:spring-boot-starter-webflux")
